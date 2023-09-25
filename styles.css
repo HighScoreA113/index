@@ -1,0 +1,59 @@
+body {
+    font: small Arial, sans-serif;
+    text-align: center;
+}
+h1 {
+    font: 2em Arial, sans-serif;
+    margin: 0.67em 0;
+}
+.container {
+    display: flex;
+    align-items: center; /* Align items to the center */
+    justify-content: center; /* Center items horizontally */
+}
+.container2 {
+    display: flex;
+    flex-direction: column;
+}
+button[type="submit"] {
+    width: 100px;
+    height: 30px;
+}
+.Square {
+    width: 200px;
+    height: 200px;
+    resize: none;
+    margin-right: 20px;
+}
+textarea {
+    height: 50px;
+}
+.Answers {
+    margin-top: 20px; /* Adjust the value as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y:auto;
+}
+.answer-textarea {
+    width: 200px; /* Increase width */
+    height: 60px;
+    padding: 5px;
+    font-size: 13px;
+    border-radius: 5px;
+    resize: none;
+}
+button {
+    margin-top: 20px; /* Adjust the value as needed */
+}
+.boarder {
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 100px; /* Set the desired margin value */
+  }
