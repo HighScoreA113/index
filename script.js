@@ -1,31 +1,8 @@
-const questionForm = document.querySelector('form');
-const questionInput = document.querySelector('#question');
-const questionList = document.querySelector('.quiz');
-const addAnswerButton = document.querySelector('.add-answer-button');
-const answersContainer = document.querySelector('.Answers');
+const square = document.querySelector('.SQUARE');
+const downButton = document.querySelector('.DOWN');
 
-addAnswerButton.addEventListener('click', () => {
-  const wrongAnswer = document.querySelector('#wrong');
-  if (wrongAnswer) {
-    const newAnswer = wrongAnswer.cloneNode(true);
-    newAnswer.value = '';
-    answersContainer.insertBefore(newAnswer, addAnswerButton);
-  }
+downButton.addEventListener('click', () => {
+  const currentHeight = square.clientHeight;
+  const newHeight = currentHeight + 50;
+  square.style.height = `${newHeight}px`;
 });
-
-questionForm.addEventListener('submit', function(event) {
-  event.preventDefault();
-  const question = questionInput.value;
-  displayQuestion(question);
-});
-
-function displayQuestion(question) {
-  // Clear the question list
-  while (questionList.firstChild) {
-    questionList.removeChild(questionList.firstChild);
-  }
-  // Add the new question
-  const questionItem = document.createElement('p');
-  questionItem.textContent = question;
-  questionList.prepend(questionItem);
-}
