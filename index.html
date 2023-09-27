@@ -4,14 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Quiz Maker</title>
+    <title>-//-</title>
 </head>
 <body>
     <h1>Quiz Maker</h1>
     <div class="CONTAINER">
-        <textarea class="SQUARE"></textarea>
-        <button class="DOWN">\V/</button>
+        <textarea class="SQUARE" placeholder="Insert question here..."></textarea>
+<!--
+        <div>
+            <button class="RESET">%</button>
+            <button class="UP">UP</button>
+            <button class="DOWN">DOWN</button>
+        </div>
+-->
+        <div class="STACK">
+            <textarea class="RIGHT" placeholder="Insert right answer here..."></textarea>
+            <textarea class="TOP-WRONG" placeholder="Insert wrong answer here..."></textarea>
+            <div class="STACK button-container">
+                <button class="REMOVEANSWER">-</button>
+                <button class="ADDANSWER">+</button>
+            </div>
+        </div>
+        <div class="CUSTOM">
+            <!-- New answers will be displayed here. -->
+        </div>
+        <div>
+            <button class="SUBMIT">SUBMIT</button>
+        </div>
     </div>
-    <script src="script.js"></script>
+    <script src="button.js"></script>
+    <script src="buttonstacks.js"></script>
+    <script src="addanswer.js"></script>
+</body>
+<body>
+    <div class="spacer"></div>
 </body>
 </html>
