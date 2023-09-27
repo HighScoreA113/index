@@ -2,21 +2,157 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    align-items: center; /* add this line */
 }
 body {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
 .SQUARE {
+    color: black; /* add this line */
     font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    font-size: 17px;
+    font-size: 13px;
     width: 300px;
     height: 200px;
     border: 1px solid black;
     resize: none;
 }
+.SQUARE::placeholder {
+    color: grey; /* add this line */
+}
+.SQUARE:not(:placeholder-shown) {
+    color: black; /* add this line */
+}
 .DOWN {
     width: 100px;
     margin-top: 10px;
+}
+.UP {
+    width: 100px;
+    margin-top: 10px;
+}
+.DOWN-STACK {
+    width: 100px;
+    margin-top: 10px;
+}
+.UP-STACK {
+    width: 100px;
+    margin-top: 10px;
+}
+@media (min-width: 768px) {
+    .STACK {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+}
+.RIGHT {
+    color: black; /* add this line */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    width: 300px;
+    height: 100px;
+    margin-top: 10px;
+    resize: none;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.RIGHT::placeholder {
+    color: grey; /* add this line */
+}
+.RIGHT:not(:placeholder-shown) {
+    color: black; /* add this line */
+}
+.TOP-WRONG {
+    color: black; /* add this line */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    width: 300px;
+    height: 100px;
+    margin-top: 10px;
+    resize: none;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.TOP-WRONG::placeholder {
+    color: grey; /* add this line */
+}
+.TOP-WRONG:not(:placeholder-shown) {
+    color: black; /* add this line */
+}
+.WRONG {
+    color: black; /* add this line */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    width: 300px;
+    height: 100px;
+    margin-top: 10px;
+    resize: none;
+}
+.WRONG::placeholder {
+    color: grey; /* add this line */
+}
+.WRONG:not(:placeholder-shown) {
+    color: black; /* add this line */
+}
+.ADDANSWER {
+    width: 100px;
+    height: 50px;
+    margin-top: 10px;
+}
+.REMOVEANSWER {
+    width: 100px;
+    height: 50px;
+    margin-top: 10px;
+}
+.SUBMIT {
+    width: 306px;
+    height: 50px;
+    margin-top: 10px;
+}
+.CONTAINER-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.QUESTION {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.ANSWERS {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.CHOICE {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    width: 100px;
+    height: 50px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+.CHOICE:hover {
+    background-color: #e6e6e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+.RESULT {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.spacer {
+    height: 300px;
 }
